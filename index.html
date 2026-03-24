@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Consumidors d'API - JSONPlaceholder</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Contenidor principal que encapsula tota l'aplicació -->
+    <div class="container">
+        
+        <!-- Capçalera de la pàgina -->
+        <header>
+            <h1>Consumidors d'API</h1>
+        </header>
+
+        <!-- Secció de controls i interacció de l'usuari -->
+        <section class="controls">
+            <!-- Selector per triar entre Fetch o Axios -->
+            <label for="apiSelector">Mètode:</label>
+            <select id="apiSelector">
+                <!-- Opció 1: Utilitza Fetch API nativa del navegador -->
+                <option value="fetch">Utilitza Fetch</option>
+                <!-- Opció 2: Utilitza Axios (llibreria externa) -->
+                <option value="axios">Utilitza Axios</option>
+            </select>
+
+            <!-- Camp d'entrada per cercar per paraula clau -->
+            <input type="text" id="searchInput" placeholder="Cerca per títol...">
+
+            <!-- Botó per obtenir les dades de l'API -->
+            <button id="fetchButton">Obtenir Dades</button>
+        </section>
+
+        <!-- Secció principal del contingut -->
+        <main>
+            <!-- Element per mostrar l'estat de càrrega (inicialment ocult) -->
+            <div id="loading" class="hidden">
+                <!-- Animació CSS per simular càrrega -->
+                <div class="spinner"></div>
+                <p>Carregant dades...</p>
+            </div>
+
+            <!-- Element per mostrar missatges d'error (inicialment ocult) -->
+            <div id="error" class="hidden"></div>
+
+            <!-- Secció on es mostraran les targetes amb les dades obtingudes -->
+            <section id="results"></section>
+
+            <!-- Secció per a la paginació (botons de navegació) -->
+            <nav id="pagination"></nav>
+        </main>
+    </div>
+
+    <!-- Script d'Axios (llibreria externa) carregada des de CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Script principal de l'aplicació -->
+    <script src="main.js"></script>
 </body>
 </html>

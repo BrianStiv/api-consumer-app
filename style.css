@@ -1,0 +1,551 @@
+/* ============================================
+   ESTILS GLOBALS
+   Configuració base per a tota la pàgina
+   ============================================ */
+
+/* Reset bàsic i configuració del cos de la pàgina */
+body {
+    /* Font principal per a tot el text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Color de fons suau per a la pàgina */
+    background-color: #f5f5f5;
+    
+    /* Color del text principal */
+    color: #333;
+    
+    /* Eliminar marges per defecte del navegador */
+    margin: 0;
+    
+    /* Afegir espai interior als costats */
+    padding: 20px;
+    
+    /* Amplada màxima del contingut per evitar línies massa llargues */
+    max-width: 1200px;
+    
+    /* Centrar el contingut horitzontalment */
+    margin: 0 auto;
+}
+
+/* ============================================
+   CLASSE UTILITÀRIA .hidden
+   Per amagar elements visualment
+   ============================================ */
+
+/* Quan un element té la classe .hidden, s'amaga completament */
+.hidden {
+    display: none !important;
+}
+
+/* ============================================
+   ESTILS DEL CONTENIDOR PRINCIPAL
+   Envoltant tota l'aplicació
+   ============================================ */
+
+.container {
+    /* Fons blanc per al contenidor principal */
+    background-color: white;
+    
+    /* Vora arredonida per a un aspecte més modern */
+    border-radius: 8px;
+    
+    /* Ombra sutil per donar profunditat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Espai interior al voltant del contingut */
+    padding: 30px;
+}
+
+/* ============================================
+   ESTILS DE LA CAPÇALERA
+   Títol principal de l'aplicació
+   ============================================ */
+
+header h1 {
+    /* Color blau per al títol */
+    color: #2c3e50;
+    
+    /* Centrar el text */
+    text-align: center;
+    
+    /* Espai inferior per separar del contingut */
+    margin-bottom: 30px;
+}
+
+/* ============================================
+   ESTILS DELS CONTROLS
+   Secció amb selectors, input i botó
+   ============================================ */
+
+.controls {
+    /* Utilitzar flexbox per a l'alineació */
+    display: flex;
+    
+    /* Alinear elements verticalment al centre */
+    align-items: center;
+    
+    /* Espai entre elements */
+    gap: 15px;
+    
+    /* Fer que els controls s'adaptin a pantalles petites */
+    flex-wrap: wrap;
+    
+    /* Color de fons per a la secció de controls */
+    background-color: #ecf0f1;
+    
+    /* Vora arredonida */
+    border-radius: 8px;
+    
+    /* Espai interior */
+    padding: 20px;
+    
+    /* Marges verticals */
+    margin-bottom: 20px;
+}
+
+/* Estils per a l'etiqueta del selector */
+.controls label {
+    /* Negret per identificar l'etiqueta */
+    font-weight: bold;
+    
+    /* Color del text */
+    color: #2c3e50;
+}
+
+/* Estils per al selector (dropdown) */
+#apiSelector {
+    /* Amplada mínima */
+    min-width: 150px;
+    
+    /* Altura per a facilitat de clic */
+    height: 40px;
+    
+    /* Vora sòlida amb color gris */
+    border: 1px solid #bdc3c7;
+    
+    /* Vora arredonida */
+    border-radius: 4px;
+    
+    /* Font llegible */
+    font-size: 14px;
+    
+    /* Cursor de pointer per indicar interactivitat */
+    cursor: pointer;
+}
+
+/* Estils per al camp d'entrada de text */
+#searchInput {
+    /* Creixement flexible per omplir l'espai disponible */
+    flex: 1;
+    
+    /* Amplada mínima */
+    min-width: 200px;
+    
+    /* Altura del camp */
+    height: 36px;
+    
+    /* Vora sòlida amb color gris */
+    border: 1px solid #bdc3c7;
+    
+    /* Vora arredonida */
+    border-radius: 4px;
+    
+    /* Espai interior */
+    padding: 0 12px;
+    
+    /* Font llegible */
+    font-size: 14px;
+}
+
+/* Estil quan l'input està enfocat (click) */
+#searchInput:focus {
+    /* Canviar el color de la vora a blau per indicar focus */
+    border-color: #3498db;
+    
+    /* Eliminar el contorn per defecte del navegador */
+    outline: none;
+}
+
+/* Estils per al botó principal */
+#fetchButton {
+    /* Color de fons blau */
+    background-color: #3498db;
+    
+    /* Color del text blanc */
+    color: white;
+    
+    /* Sense vores */
+    border: none;
+    
+    /* Vora arredonida */
+    border-radius: 4px;
+    
+    /* Altura del botó */
+    height: 40px;
+    
+    /* Espai interior horitzontal */
+    padding: 0 24px;
+    
+    /* Font en negreta */
+    font-weight: bold;
+    
+    /* Tamany de font llegible */
+    font-size: 14px;
+    
+    /* Cursor de pointer */
+    cursor: pointer;
+    
+    /* Transició suaual per a l'efecte hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecte hover: quan el ratolí està sobre el botó */
+#fetchButton:hover {
+    /* Canviar a un blau més fosc */
+    background-color: #2980b9;
+}
+
+/* Efecte actiu: quan el botó està sent clicat */
+#fetchButton:active {
+    /* Canviar a un blau encara més fosc */
+    background-color: #21618c;
+}
+
+/* ============================================
+   ESTILS DE L'INDICADOR DE CÀRREGA
+   Animació mentre es carreguen les dades
+   ============================================ */
+
+#loading {
+    /* Centrar el contingut horitzontalment */
+    text-align: center;
+    
+    /* Afegir espai vertical */
+    padding: 40px 0;
+}
+
+/* Estils per a l'element Spinner (bola giratòria) */
+.spinner {
+    /* Dimensions del spinner */
+    width: 50px;
+    height: 50px;
+    
+    /* Vora del cercle amb el mateix color que el fons (invisible) */
+    border: 5px solid #ecf0f1;
+    
+    /* Vora superior amb color blau (visible) */
+    border-top-color: #3498db;
+    
+    /* Fer el cercle perfecte */
+    border-radius: 50%;
+    
+    /* Animació de rotació */
+    animation: spin 1s linear infinite;
+    
+    /* Centrar el spinner */
+    margin: 0 auto 15px;
+}
+
+/* Definició de l'animació de rotació */
+@keyframes spin {
+    /* Des de 0 graus */
+    from { transform: rotate(0deg); }
+    /* Fins a 360 graus (una volta completa) */
+    to { transform: rotate(360deg); }
+}
+
+/* Text sota l'spinner */
+#loading p {
+    /* Color del text */
+    color: #7f8c8d;
+    
+    /* Tamany de font */
+    font-size: 16px;
+    
+    /* Eliminar marges */
+    margin: 0;
+}
+
+/* ============================================
+   ESTILS DELS MISSATGES D'ERROR
+   Quan alguna cosa surt malament
+   ============================================ */
+
+#error {
+    /* Color de fons vermell molt clar */
+    background-color: #fadbd8;
+    
+    /* Color del text vermell fosc */
+    color: #c0392b;
+    
+    /* Vora roja */
+    border: 1px solid #e74c3c;
+    
+    /* Vora arredonida */
+    border-radius: 4px;
+    
+    /* Espai interior */
+    padding: 15px 20px;
+    
+    /* Marges verticals */
+    margin-bottom: 20px;
+    
+    /* Tamany de font llegible */
+    font-size: 14px;
+    
+    /* Icona de ❌ al davant del missatge (pseudo-element) */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#error::before {
+    content: "⚠️";
+    font-size: 20px;
+}
+
+/* ============================================
+   ESTILS DE LA SECCIÓ DE RESULTATS
+   Contenidor de les targetes amb dades
+   ============================================ */
+
+#results {
+    /* Utilitzar CSS Grid per a la disposició en columnes */
+    display: grid;
+    
+    /* Crear columnes automàticament:
+       Cada columna té un ample mínim de 300px
+       Si no hi ha espai, baixa a la propera fila */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    /* Espai entre les targetes */
+    gap: 20px;
+    
+    /* Espai vertical entre resultats i paginació */
+    margin-top: 30px;
+}
+
+/* ============================================
+   ESTILS DE LES TARGETES (CARDS)
+   Cada element individual de dades
+   ============================================ */
+
+.card {
+    /* Fons blanc per a cada targeta */
+    background-color: white;
+    
+    /* Vora sòlida amb color gris clar */
+    border: 1px solid #ddd;
+    
+    /* Vora arredonida */
+    border-radius: 8px;
+    
+    /* Espai interior generós */
+    padding: 20px;
+    
+    /* Ombra subtil per donat profunditat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    
+    /* Transició suaual per a l'efecte hover */
+    transition: all 0.3s ease;
+    
+    /* Cursor de pointer */
+    cursor: default;
+}
+
+/* Efecte hover: quan el ratolí està sobre la targeta */
+.card:hover {
+    /* Elevar la targeta amb una ombra més gran */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    
+    /* Moure lleugerament cap amunt */
+    transform: translateY(-3px);
+}
+
+/* Estils per al títol de la targeta (títol del post) */
+.card h3 {
+    /* Color blau per al títol */
+    color: #2c3e50;
+    
+    /* Tamany de font més gran */
+    font-size: 18px;
+    
+    /* Límit d'alçada amb text que es pot tallar */
+    max-height: 50px;
+    
+    /* Tallar text que no cap */
+    overflow: hidden;
+    
+    /* Marges ajustats */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Estils per al cos de la targeta (cos del post) */
+.card p {
+    /* Color gris per al text */
+    color: #555;
+    
+    /* Tamany de font llegible */
+    font-size: 14px;
+    
+    /* Alçada màxima */
+    max-height: 80px;
+    
+    /* Tallar text que no cap */
+    overflow: hidden;
+    
+    /* Espai entre línies */
+    line-height: 1.5;
+    
+    /* Marges */
+    margin: 0;
+}
+
+/* Estils per a la ID del post */
+.card .post-id {
+    /* Color gris clar */
+    color: #999;
+    
+    /* Tamany de font més petit */
+    font-size: 12px;
+    
+    /* Posicionar a la part superior dreta */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Posicionament relatiu per contenir elements absoluts */
+.card {
+    position: relative;
+}
+
+/* ============================================
+   ESTILS DELS BOTONS DE PAGINACIÓ
+   Navegació entre pàgines de resultats
+   ============================================ */
+
+#pagination {
+    /* Centrar els botons horitzontalment */
+    text-align: center;
+    
+    /* Espai vertical */
+    margin-top: 30px;
+    
+    /* Flexbox per organitzar els botons */
+    display: flex;
+    
+    /* Ajustar automàticament les files si no caven */
+    flex-wrap: wrap;
+    
+    /* Justificar el contingut al centre */
+    justify-content: center;
+    
+    /* Espai entre botons */
+    gap: 8px;
+}
+
+/* Estils generals per als botons de paginació */
+#pagination button {
+    /* Color de fons gris clar */
+    background-color: #ecf0f1;
+    
+    /* Color del text gris fosc */
+    color: #2c3e50;
+    
+    /* Sense vores */
+    border: none;
+    
+    /* Vora arredonida */
+    border-radius: 4px;
+    
+    /* Tamany del botó */
+    width: 40px;
+    height: 40px;
+    
+    /* Font llegible */
+    font-size: 14px;
+    
+    /* Cursor de pointer */
+    cursor: pointer;
+    
+    /* Transició suaual */
+    transition: all 0.3s ease;
+}
+
+/* Efecte hover per a botons de paginació */
+#pagination button:hover:not(:disabled) {
+    /* Canviar color de fons a blau */
+    background-color: #3498db;
+    
+    /* Canviar color del text a blanc */
+    color: white;
+}
+
+/* Estils per al botó actiu (pàgina actual) */
+#pagination button.active {
+    /* Color de fons blau fosc */
+    background-color: #2c3e50;
+    
+    /* Color del text blanc */
+    color: white;
+    
+    /* Cursor per defecte (no clickable) */
+    cursor: default;
+}
+
+/* Estils per a botons deshabilitats */
+#pagination button:disabled {
+    /* Color de fons molt clar */
+    background-color: #bdc3c7;
+    
+    /* Color del text gris */
+    color: #7f8c8d;
+    
+    /* Cursor no permès */
+    cursor: not-allowed;
+    
+    /* Opacitat reduïda */
+    opacity: 0.6;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   Adaptació per a dispositius mòbils
+   ============================================ */
+
+/* Quan la pantalla és més petita de 768px */
+@media (max-width: 768px) {
+    /* Reduir l'espai interior del contenidor */
+    .container {
+        padding: 15px;
+    }
+    
+    /* Canviar la direcció dels controls a columna */
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* Amplada completa per al selector */
+    #apiSelector {
+        width: 100%;
+    }
+    
+    /* Amplada completa per a l'input */
+    #searchInput {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Amplada completa per al botó */
+    #fetchButton {
+        width: 100%;
+    }
+    
+    /* Reduir la mida de les columnes en pantalles petites */
+    #results {
+        grid-template-columns: 1fr;
+    }
+}
